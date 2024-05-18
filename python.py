@@ -9,7 +9,7 @@ def main(page: ft.Page):
     page.update()
 
     def button_clicked(e):
-        output_text.value = f"Your age is :  {color_dropdown.value}"
+        output_text.value = f"Your age is   {color_dropdown.value}"
         page.update()
 
     output_text = ft.Text()
@@ -35,7 +35,7 @@ def main(page: ft.Page):
         else:
             name = txt_name.value
            
-            page.add(ft.Text(f"Your name is : {name}"))
+            # page.add(ft.Text(f"Your name is : {name}"))
 
     txt_name = ft.TextField(label="Your name")
 
@@ -50,7 +50,7 @@ def main(page: ft.Page):
     
     
     def button_clicked(e):
-        page.add(ft.Text(f"{txt_name.value} and {output_text.value}"))
+        page.add(ft.Text(f"Your name is {txt_name.value} and {output_text.value}"))
 
     page.add(ft.ElevatedButton(text="✔️", on_click=button_clicked))
 
